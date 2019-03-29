@@ -1,5 +1,5 @@
-#Reversal of Linked List
+# Reversal of Linked List
 
-*Time Complexity: O(n)
+* Time Complexity: O(n)
 
-*Space Complexity: O(n) 
+* Space Complexity: O(n) 

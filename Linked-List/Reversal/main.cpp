@@ -8,30 +8,25 @@ struct Node{
 };
 
 int main(){
-	// Creating the linked list
-	//int num[5] = {1, 2, 3, 4, 5};
+	int i;
 	Node *head = new Node;
 	Node *current = new Node;
-	//cout << "Enter the numbers in the list: ";
-	//cin >> num;
-	//head->data = num[0];
-	head->data = 1;
-	current = head;
-	for(int i = 1; i < 10; ++i){
-		//cin >> num[i];
+	head = current;
+	for(i = 0; i < 9; ++i){
 		Node *temp = new Node;
-		temp->data = i + 1;
+		current->data = i + 1;
 		current->next = temp;
 		current = temp;
 	}
+	current->data = i + 1;
 	current->next = NULL;
-	Node *temp = new Node;
-	temp = head;
-	while(temp->next != NULL){
-		cout << temp->data << "\t";
-		temp = temp->next;
+	
+	current = head;
+	while(current->next != NULL){
+		cout << current->data << "\t";
+		current = current->next;
 	}
-	cout << temp->data << endl;
+	cout << current->data << endl;
 
 	//reversing
 
@@ -50,11 +45,12 @@ int main(){
 	temp2->next = temp1;
 	head = temp2;
 
-	while(temp->next != NULL){
-		cout << temp->data << "\t";
-		temp = temp->next;
+	current = head;
+	while(current->next != NULL){
+		cout << current->data << "\t";
+		current = current->next;
 	}
-	cout << temp->data << endl;	
+	cout << current->data << endl;
 
 	return 0;
 } 
